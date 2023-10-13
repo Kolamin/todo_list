@@ -12,9 +12,9 @@ export const InputPlus: React.FC<InputPlusProps> = ({ onAdd }) => {
     onAdd(inputValue);
     setInputValue("");
   }, [inputValue]);
-  
+
   return (
-    <div className={styles.InputPlus}>
+    <div className={styles.inputPlus}>
       <input
         type="text"
         className={styles.inputPlusValue}
