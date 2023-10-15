@@ -13,17 +13,19 @@ export const App: React.FC = () => {
     state.removeTask,
   ]);
 
-  console.log(11, tasks);
+  console.log(tasks);
 
   return (
     <article className={styles.article}>
       <h1 className={styles.articleTitle}>To Do App</h1>
       <section className={styles.articleSection}>
-        <InputPlus onAdd={(title) => {
-          if(title){
-            createTask(title)
-          }
-        }}/>
+        <InputPlus
+          onAdd={(title) => {
+            if (title) {
+              createTask(title);
+            }
+          }}
+        />
       </section>
       <section className={styles.articleSection}></section>
     </article>
