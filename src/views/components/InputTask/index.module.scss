@@ -1,31 +1,64 @@
-.inputTask{
-    width: 100%;
+.inputTask {
+    //width: 100%;
     display: grid;
-    grid-template-columns: 1fr 60px;
+    grid-template-columns: 1fr 50px 50px;
     margin-bottom: 15px;
-    
-   &Value{
-    border: 1px solid #B1B1B1;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 9px 10px;
-    font: 1rem/1.4 'Roboto', sans-serif;
-    background: #DBE2EF;
-    &::placeholder{
-        color: #7b7b7b;
-    }
-   } 
+    background: #dbe2ef;
+    border-radius: 5px;
+    padding-right: 15px;
 
-   &Button{
-    border-radius: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: none;
-    cursor: pointer;
-    background: #3F72AF url('./images/plus.svg') no-repeat center center;
-    transition: opacity 0.3;
-    &:hover {
-       opacity: 0.7; 
+    &Label {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        padding: 12px 15px;
+        cursor: pointer;
     }
-   }
+
+    &Checkbox {
+        width: 20px;
+        height: 20px;
+    }
+
+    &Title {
+        padding: 5px;
+        line-height: 1.2;
+    }
+
+    &EditTitle {
+        font:
+            1rem/1em "Roboto",
+            sans-serif;
+        border: none;
+        padding: 5px;
+        background: none;
+        box-shadow: 0 4px 0 -3px #3f72af;
+    }
+
+    &Edit,
+    &Remove,
+    &Save {
+        display: block;
+        height: 100%;
+        border: none;
+        background: none no-repeat center center;
+        cursor: pointer;
+        padding: 0;
+        transition: opacity 0.3s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &Edit {
+        background-image: url("./images/edit.svg");
+    }
+
+    &Remove {
+        background-image: url("./images/trash.svg");
+    }
+
+    &Save {
+        background-image: url("./images/check.svg");
+    }
 }
